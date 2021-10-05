@@ -33,6 +33,12 @@ public @ResponseBody Hospital getHospital(@PathVariable("id") int id) throws Exc
         return hospitalService.getHospital(id);
     }
 
+@GetMapping("hello")
+public @ResponseBody String getHello() throws Exception {
+
+        return "Hello World";
+    }
+
 @GetMapping("hospitals")
 public @ResponseBody List<Hospital> getAllHospitals() throws Exception {
 		return hospitalService.getAllHospitals();
